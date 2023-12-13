@@ -4,8 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>5 Day Weather Dashboard</title>
+    
 </head>
 <body>
-    
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+    <main>
+        <section class="search" id="search">
+            <form class="searchContainer">
+                <label for="searchCity">Search for a City</label>
+                <input type="text" name="searchCity" id="searchCity" placeholder="Enter a city name" required>
+                <!-- <button id="searchBtn">Search</button> -->
+                <input type="submit" name="searchBtn" id="searchBtn" value="Search">
+            </form>
+            <ul class="pastSearchesBtn" id="pastSearchesBtn">
+                <li><button>placeholder</button></li>
+            </ul>
+        </section>
+        <section class="currentWeather" id="currentWeather">
+
+        </section>
+        <section class="fiveDayForecast" id="fiveDayForecast">
+
+        </section>
+    </main>
 </body>
 </html>
