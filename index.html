@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>5 Day Weather Dashboard</title>
-    
+    <link rel="stylesheet" href="./assets/styles.css">
 </head>
 <body>
     <header>
         <h1>Weather Dashboard</h1>
     </header>
     <main>
+        <!-- LH container for search form and past searches -->
         <section class="search" id="search">
             <form class="searchContainer">
                 <label for="searchCity">Search for a City</label>
@@ -22,15 +23,22 @@
                 <li><button>placeholder</button></li>
             </ul>
         </section>
+        <!-- RH Top container for current weather of searched city -->
         <section class="currentWeather" id="currentWeather">
             <h2 id="cityName"></h2>
             <p class="cityInfo" id="cityTemp"></p>
             <p class="cityInfo" id="cityWind"></p>
             <p class="cityInfo" id="cityHumidity"></p>
         </section>
+        <!-- RH Bottom container containing cards with the 5 day forecast of current city -->
         <section class="fiveDayForecast" id="fiveDayForecast">
-            
+            <h3>5-Day Forecast:</h3>
+            <div class="smallCards" id="smallCards"></div>
         </section>
     </main>
+    <!-- Attaching javascript file and outside scripts -->
+    <script src="./assets/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/dayjs.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </body>
 </html>
