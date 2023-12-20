@@ -14,21 +14,20 @@
         <!-- LH container for search form and past searches -->
         <section class="search" id="search">
             <form class="searchContainer">
-                <label for="searchCity">Search for a City</label>
+                <label for="searchCity">Search for a City:</label>
                 <input type="text" name="searchCity" id="searchCity" placeholder="Enter a city name" required>
                 <!-- <button id="searchBtn">Search</button> -->
                 <input type="submit" name="searchBtn" id="searchBtn" value="Search">
             </form>
             <ul class="pastSearchesBtn" id="pastSearchesBtn">
-                <li><button>Sussex</button></li>
             </ul>
         </section>
         <!-- RH container to hold both the current weather and the 5 day forecast containers -->
-        <section class="containerRH" id="containerRH">
+        <section class="containerRH displayNone" id="containerRH">
             <!-- RH Top container for current weather of searched city -->
             <div class="currentWeather" id="currentWeather">
                 <h2 id="cityName"></h2>
-                <p class="cityInfo" id="cityTemp">Temp:</p>
+                <p class="cityInfo" id="cityTemp"></p>
                 <p class="cityInfo" id="cityWind"></p>
                 <p class="cityInfo" id="cityHumidity"></p>
             </div>
@@ -38,7 +37,6 @@
                 <div class="smallCards" id="smallCards"></div>
             </div>
         </section>
-        
     </main>
     <!-- Attaching javascript file and outside scripts -->
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>

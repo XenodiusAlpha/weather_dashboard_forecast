@@ -29,7 +29,6 @@ function searchCity(e) {
     let pastCity = e.target.textContent;
     // if no city is entered and submit button is pressed, exit function
     if(!newCity && !pastCity) {
-        console.log("insert a city");
         return;
     }
     // checks to see if newCity already exists in cityArray, if it does, set city variable to newCity and fetch information
@@ -53,6 +52,7 @@ function searchCity(e) {
         // appending the li and btn to the ul of past searches
         newLiCity.append(newCityBtn);
         pastSearchesBtnEl.appendChild(newLiCity);
+        searchCityEl.value = '';
     }
     // updated endpoint to include the searched city, and declare and option for the units to be in metric format
     let queryCityURL = `${queryURL}${city}&units=metric&appid=${APIKey}`;
@@ -85,7 +85,6 @@ function searchCity(e) {
             // declaring variables for lattitude and longitude to be used in 5 day forecast.
             let lat = data.coord.lat;
             let lon = data.coord.lon;
-            console.log(lat, lon);
             // using fetch to retreive data using the lat and lon for the new end point
             fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${APIKey}`)
             // returning response
