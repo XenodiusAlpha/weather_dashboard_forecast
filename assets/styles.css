@@ -1,3 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+header {
+    color: white;
+    background: linear-gradient(to right,  #481affd5, #21019e);
+    padding: 10px 10px 10px 200px;
+    margin: 10px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+}
+
+.search {
+    padding: 15px;
+    width: 300px;
+}
+
+.searchContainer {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid #a1a0a0;
+    margin-bottom: 10px;
+    padding-bottom: 7px;
+}
+
+.searchContainer label {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+input {
+    font-size: medium;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+#searchBtn {
+    color: white;
+    background-color: #6f6fd6;
+    border: none;
+    cursor: pointer;
+}
+
+#searchBtn:hover {
+    background-color: #6f6fd6e9;
+}
+
+.pastSearchesLi {
+    list-style: none;
+}
+
+.pastSearchesLi button{
+    color: black;
+    background-color: #a1a0a0;
+    border: none;
+    width: 100%;
+    font-size: medium;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pastSearchesLi button:hover {
+    background-color: #a1a0a08a;
+}
+
+.containerRH {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.currentWeather {
+    display: flex;
+    flex-direction: column;
+    border: 2px black solid;
+    margin-top: 20px;
+    padding: 0 0 10px 10px;
+}
+
+#cityName {
+    display: flex;
+    align-items: center;
+    font-size: 2.0em;
+}
+
+#cityName img {
+    width: 50px;
+    height: 50px;
+}
+
+.fiveDayForecast {
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    padding: 10px;
+}
+
+.dayCard {
+    color: white;
+    background-color: rgb(58, 55, 62);
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+}
+
+.smallCards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .displayNone {
     display: none;
+}
+
+@media only screen and (max-width: 666px) {
+    header {
+        padding-left: 0;
+        font-size: .8rem;
+    }
+    .currentWeather {
+        margin: 0;
+        padding: 10px;
+    }
+    #cityName {
+        font-size: 1.2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 367px) {
+    main {
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+    }
+    .containerRH {
+        margin-left: 10px;
+    }
+    h3 {
+        margin-left: 20px;
+    }
+    .smallCards {
+        margin-left: 30px;
+    }
 }
